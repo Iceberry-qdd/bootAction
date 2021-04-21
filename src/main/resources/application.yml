@@ -1,0 +1,15 @@
+server:
+  servlet:
+    context-path: /bootAction
+spring:
+  datasource:
+    url: jdbc:sqlite::resource:bootAction.db
+    driver-class-name: org.sqlite.JDBC
+    initialization-mode: always
+mybatis:
+  configuration:
+    lazy-loading-enabled: true
+    cache-enabled: true
+    aggressive-lazy-loading: true
+  mapper-locations: classpath:mybatis/mapper/*Mapper.xml
+
